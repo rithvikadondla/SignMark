@@ -1,0 +1,39 @@
+{
+  "seed": 42,
+  "number_size": 64,
+  "phrase_size": 128,
+  "dtype": "uint8",
+  "colour": "RGB",
+  "resize": "cv2.INTER_AREA, squashed to a square",
+  "normalisation": "divide by 255 at training time",
+  "numbers": {
+    "classes": 10,
+    "train": {
+      "images": 6800,
+      "skipped": []
+    },
+    "val": {
+      "images": 1200,
+      "skipped": []
+    },
+    "test": {
+      "images": 2000,
+      "skipped": []
+    }
+  },
+  "phrases": {
+    "classes": 44,
+    "train": {
+      "images": 1232,
+      "skipped": []
+    },
+    "val": {
+      "images": 176,
+      "skipped": []
+    },
+    "test": {
+      "images": 352,
+      "skipped": []
+    }
+  }
+}

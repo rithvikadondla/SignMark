@@ -1,0 +1,18 @@
+{
+  "image_size": 64,
+  "interpolation": "bilinear",
+  "dtype": "uint8",
+  "normalisation": "divide by 255 at training time",
+  "train": {
+    "images": 58000,
+    "skipped": []
+  },
+  "val": {
+    "images": 14503,
+    "skipped": []
+  },
+  "test": {
+    "images": 14497,
+    "skipped": []
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "task": "numbers",
+  "model": "cnn",
+  "class_names": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9"
+  ],
+  "input_size": 64,
+  "input": "RGB, float or uint8 values 0-255, resized to input_size x input_size",
+  "preprocessing_inside_model": true,
+  "suggested_confidence_threshold": 0.5,
+  "threshold_chosen_on": "validation data",
+  "threshold_info": {
+    "coverage": 1.0,
+    "accuracy_above_threshold": 1.0
+  },
+  "test_accuracy": 1.0,
+  "trained": "2026-11-18 18:50:51",
+  "seed": 42
+}

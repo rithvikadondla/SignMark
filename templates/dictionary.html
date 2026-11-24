@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SignMark | ASL Dictionary</title>
+
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">Sign<span>Mark.</span></div>
+
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/home">Dashboard</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/studio">Studio</a></li>
+            <li><a href="/dictionary" class="active">Dictionary</a></li>
+            <li><a href="/quiz">Quiz</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="dictionary-section">
+
+    <div class="section-heading">
+        <span>LEARN AMERICAN SIGN LANGUAGE</span>
+        <h1>ASL Alphabet <span>Dictionary</span></h1>
+        <p>Explore and learn American Sign Language letters from A to Z.</p>
+    </div>
+
+    <div class="dictionary-tools">
+
+        <input
+            type="text"
+            id="dictionarySearch"
+            placeholder="🔍 Search any letter (A-Z)..."
+            aria-label="Search ASL letters"
+        >
+
+        <div class="alphabet-filter">
+
+            <button class="alphabet-btn active" data-letter="all">All</button>
+            <button class="alphabet-btn" data-letter="A">A</button>
+            <button class="alphabet-btn" data-letter="B">B</button>
+            <button class="alphabet-btn" data-letter="C">C</button>
+            <button class="alphabet-btn" data-letter="D">D</button>
+            <button class="alphabet-btn" data-letter="E">E</button>
+            <button class="alphabet-btn" data-letter="F">F</button>
+            <button class="alphabet-btn" data-letter="G">G</button>
+            <button class="alphabet-btn" data-letter="H">H</button>
+            <button class="alphabet-btn" data-letter="I">I</button>
+            <button class="alphabet-btn" data-letter="J">J</button>
+            <button class="alphabet-btn" data-letter="K">K</button>
+            <button class="alphabet-btn" data-letter="L">L</button>
+            <button class="alphabet-btn" data-letter="M">M</button>
+            <button class="alphabet-btn" data-letter="N">N</button>
+            <button class="alphabet-btn" data-letter="O">O</button>
+            <button class="alphabet-btn" data-letter="P">P</button>
+            <button class="alphabet-btn" data-letter="Q">Q</button>
+            <button class="alphabet-btn" data-letter="R">R</button>
+            <button class="alphabet-btn" data-letter="S">S</button>
+            <button class="alphabet-btn" data-letter="T">T</button>
+            <button class="alphabet-btn" data-letter="U">U</button>
+            <button class="alphabet-btn" data-letter="V">V</button>
+            <button class="alphabet-btn" data-letter="W">W</button>
+            <button class="alphabet-btn" data-letter="X">X</button>
+            <button class="alphabet-btn" data-letter="Y">Y</button>
+            <button class="alphabet-btn" data-letter="Z">Z</button>
+
+        </div>
+    </div>
+
+    <div class="dictionary-grid" id="dictionaryGrid">
+
+        <div class="letter-card" data-letter="A">
+            <img src="/static/images/A.jpg" alt="ASL Letter A">
+            <h2>A</h2>
+            <p>Letter A</p>
+        </div>
+
+        <div class="letter-card" data-letter="B">
+            <img src="/static/images/B.jpg" alt="ASL Letter B">
+            <h2>B</h2>
+            <p>Letter B</p>
+        </div>
+
+        <div class="letter-card" data-letter="C">
+            <img src="/static/images/C.jpg" alt="ASL Letter C">
+            <h2>C</h2>
+            <p>Letter C</p>
+        </div>
+
+        <div class="letter-card" data-letter="D">
+            <img src="/static/images/D.jpg" alt="ASL Letter D">
+            <h2>D</h2>
+            <p>Letter D</p>
+        </div>
+
+        <div class="letter-card" data-letter="E">
+            <img src="/static/images/E.jpg" alt="ASL Letter E">
+            <h2>E</h2>
+            <p>Letter E</p>
+        </div>
+
+        <div class="letter-card" data-letter="F">
+            <img src="/static/images/F.jpg" alt="ASL Letter F">
+            <h2>F</h2>
+            <p>Letter F</p>
+        </div>
+
+        <div class="letter-card" data-letter="G">
+            <img src="/static/images/G.jpg" alt="ASL Letter G">
+            <h2>G</h2>
+            <p>Letter G</p>
+        </div>
+
+        <div class="letter-card" data-letter="H">
+            <img src="/static/images/H.jpg" alt="ASL Letter H">
+            <h2>H</h2>
+            <p>Letter H</p>
+        </div>
+
+        <div class="letter-card" data-letter="I">
+            <img src="/static/images/I.jpg" alt="ASL Letter I">
+            <h2>I</h2>
+            <p>Letter I</p>
+        </div>
+
+        <div class="letter-card" data-letter="J">
+            <img src="/static/images/J.jpg" alt="ASL Letter J">
+            <h2>J</h2>
+            <p>Letter J</p>
+        </div>
+
+        <div class="letter-card" data-letter="K">
+            <img src="/static/images/K.jpg" alt="ASL Letter K">
+            <h2>K</h2>
+            <p>Letter K</p>
+        </div>
+
+        <div class="letter-card" data-letter="L">
+            <img src="/static/images/L.jpg" alt="ASL Letter L">
+            <h2>L</h2>
+            <p>Letter L</p>
+        </div>
+
+        <div class="letter-card" data-letter="M">
+            <img src="/static/images/M.jpg" alt="ASL Letter M">
+            <h2>M</h2>
+            <p>Letter M</p>
+        </div>
+
+        <div class="letter-card" data-letter="N">
+            <img src="/static/images/N.jpg" alt="ASL Letter N">
+            <h2>N</h2>
+            <p>Letter N</p>
+        </div>
+
+        <div class="letter-card" data-letter="O">
+            <img src="/static/images/O.jpg" alt="ASL Letter O">
+            <h2>O</h2>
+            <p>Letter O</p>
+        </div>
+
+        <div class="letter-card" data-letter="P">
+            <img src="/static/images/P.jpg" alt="ASL Letter P">
+            <h2>P</h2>
+            <p>Letter P</p>
+        </div>
+
+        <div class="letter-card" data-letter="Q">
+            <img src="/static/images/Q.jpg" alt="ASL Letter Q">
+            <h2>Q</h2>
+            <p>Letter Q</p>
+        </div>
+
+        <div class="letter-card" data-letter="R">
+            <img src="/static/images/R.jpg" alt="ASL Letter R">
+            <h2>R</h2>
+            <p>Letter R</p>
+        </div>
+
+        <div class="letter-card" data-letter="S">
+            <img src="/static/images/S.jpg" alt="ASL Letter S">
+            <h2>S</h2>
+            <p>Letter S</p>
+        </div>
+
+        <div class="letter-card" data-letter="T">
+            <img src="/static/images/T.jpg" alt="ASL Letter T">
+            <h2>T</h2>
+            <p>Letter T</p>
+        </div>
+
+        <div class="letter-card" data-letter="U">
+            <img src="/static/images/U.jpg" alt="ASL Letter U">
+            <h2>U</h2>
+            <p>Letter U</p>
+        </div>
+
+        <div class="letter-card" data-letter="V">
+            <img src="/static/images/V.jpg" alt="ASL Letter V">
+            <h2>V</h2>
+            <p>Letter V</p>
+        </div>
+
+        <div class="letter-card" data-letter="W">
+            <img src="/static/images/W.jpg" alt="ASL Letter W">
+            <h2>W</h2>
+            <p>Letter W</p>
+        </div>
+
+        <div class="letter-card" data-letter="X">
+            <img src="/static/images/X.jpg" alt="ASL Letter X">
+            <h2>X</h2>
+            <p>Letter X</p>
+        </div>
+
+        <div class="letter-card" data-letter="Y">
+            <img src="/static/images/Y.jpg" alt="ASL Letter Y">
+            <h2>Y</h2>
+            <p>Letter Y</p>
+        </div>
+
+        <div class="letter-card" data-letter="Z">
+            <img src="/static/images/Z.jpg" alt="ASL Letter Z">
+            <h2>Z</h2>
+            <p>Letter Z</p>
+        </div>
+
+    </div>
+
+    <p id="dictionaryNoResults" style="display:none;">
+        No letters found. Try another letter! 😊
+    </p>
+
+    <div id="dictionaryModal" class="dictionary-modal">
+        <div class="dictionary-modal-content">
+
+            <span id="closeDictionaryModal" class="dictionary-close">&times;</span>
+
+            <img id="modalSignImage" src="" alt="ASL Sign">
+
+            <h2 id="modalSignLetter"></h2>
+
+            <p>American Sign Language Alphabet</p>
+
+        </div>
+    </div>
+
+</main>
+
+<footer class="home-footer">
+    <div class="footer-content">
+        <h2>Sign<span>Mark.</span></h2>
+        <p>Breaking communication barriers through sign language learning.</p>
+    </div>
+
+    <p class="footer-bottom">© 2026 SignMark. All rights reserved.</p>
+</footer>
+
+<script src="/static/js/dictionary.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sign Recognition | SignMark</title>
+
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">Sign<span>Mark.</span></div>
+
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/home">Dashboard</a></li>
+                <li><a href="/studio" class="active">Recognition</a></li>
+                <li><a href="/dictionary">Dictionary</a></li>
+                <li><a href="/quiz">Quiz</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+
+            <a href="/home" class="nav-btn">Dashboard</a>
+
+        </nav>
+    </header>
+
+
+    <!-- STUDIO SECTION -->
+    <section class="studio-section">
+
+        <!-- HEADING -->
+        <div class="studio-heading">
+
+            <span class="studio-tag">AI POWERED ASL</span>
+
+            <h1>Sign Recognition <span>Studio</span></h1>
+
+            <p>
+                Show your hand sign or upload an image to explore
+                American Sign Language recognition.
+            </p>
+
+        </div>
+
+
+        <!-- MAIN CONTAINER -->
+        <div class="studio-container">
+
+
+            <!-- LEFT SIDE: INPUT -->
+            <div class="studio-box">
+
+                <h2>Try Sign Recognition</h2>
+
+                <p class="studio-subtitle">
+                    Upload a hand sign image or use your camera.
+                </p>
+
+
+                <!-- IMAGE UPLOAD -->
+                <div class="upload-area">
+
+                    <div class="upload-icon">📸</div>
+
+                    <h3>Upload Your Image</h3>
+
+                    <p>Choose an image of an ASL hand sign.</p>
+
+                    <input
+                        type="file"
+                        id="imageInput"
+                        accept="image/jpeg,image/png,image/jpg"
+                    >
+
+                    <button
+                        type="button"
+                        class="studio-btn"
+                        onclick="document.getElementById('imageInput').click()"
+                    >
+                        Choose Image
+                    </button>
+
+
+                    <!-- IMAGE PREVIEW -->
+                    <img
+                        id="imagePreview"
+                        alt="Selected Hand Sign Preview"
+                        style="display:none;"
+                    >
+
+
+                    <!-- RECOGNIZE SIGN BUTTON -->
+                    <button
+                        type="button"
+                        id="recognizeBtn"
+                        class="studio-btn"
+                        style="display:none;"
+                    >
+                        🤖 Recognize Sign
+                    </button>
+
+
+                    <!-- REMOVE IMAGE -->
+                    <button
+                        type="button"
+                        id="removeImageBtn"
+                        class="remove-image-btn"
+                    >
+                        🗑️ Remove Image
+                    </button>
+
+                </div>
+
+
+                <!-- IMAGE GUIDANCE -->
+                <div class="image-guidance">
+
+                    <h3>📸 Tips for Better Recognition</h3>
+
+                    <div class="guidance-tips">
+
+                        <div class="guidance-tip">
+                            <span>💡</span>
+                            <p>Keep your hand clearly visible.</p>
+                        </div>
+
+                        <div class="guidance-tip">
+                            <span>☀️</span>
+                            <p>Use proper lighting.</p>
+                        </div>
+
+                        <div class="guidance-tip">
+                            <span>🖐️</span>
+                            <p>Keep your hand in the centre.</p>
+                        </div>
+
+                        <div class="guidance-tip">
+                            <span>🎯</span>
+                            <p>Choose a simple background.</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CAMERA CONTROLS -->
+                <div class="camera-buttons">
+
+                    <button
+                        type="button"
+                        class="camera-btn"
+                        id="startCamera"
+                    >
+                        📷 Start Camera
+                    </button>
+
+                    <button
+                        type="button"
+                        class="camera-btn stop-btn"
+                        id="stopCamera"
+                    >
+                        Stop Camera
+                    </button>
+
+                    <button
+                        type="button"
+                        class="camera-btn"
+                        id="resetStudioBtn"
+                    >
+                        ↩️ Reset Studio
+                    </button>
+
+                </div>
+
+
+                <!-- CAMERA PREVIEW -->
+                <video
+                    id="cameraPreview"
+                    autoplay
+                    playsinline
+                    style="display:none;"
+                ></video>
+
+
+                <!-- CAMERA STATUS -->
+                <div id="cameraStatus" class="camera-status">
+                    ⚪ Camera is inactive
+                </div>
+
+
+                <!-- PROCESSING INDICATOR -->
+                <div
+                    id="processingIndicator"
+                    class="processing-indicator"
+                    style="display:none;"
+                >
+
+                    <div class="processing-spinner"></div>
+
+                    <p>Processing Sign...</p>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT SIDE: RESULT -->
+            <div class="result-box">
+
+                <div class="result-icon">🤟</div>
+
+                <h2>Recognition Result</h2>
+
+                <p class="studio-subtitle">
+                    Your predicted ASL sign will appear here.
+                </p>
+
+
+                <!-- PREDICTION -->
+                <div class="prediction-area">
+
+                    <div
+                        id="recognitionFeedback"
+                        class="recognition-feedback ready"
+                    >
+
+                        <span id="feedbackIcon">✨</span>
+
+                        <span id="feedbackText">
+                            Ready for recognition
+                        </span>
+
+                    </div>
+
+                    <span>Predicted Sign</span>
+
+                    <h1 id="prediction">--</h1>
+
+                    <p id="resultMessage">
+                        Upload an image and click Recognize Sign.
+                    </p>
+
+                </div>
+
+
+                <!-- CONFIDENCE -->
+                <div class="confidence-area">
+
+                    <span>Confidence Score</span>
+
+                    <h3 id="confidence">--</h3>
+
+                </div>
+
+
+                <!-- CONFIDENCE METER -->
+                <div class="confidence-meter">
+
+                    <div class="confidence-meter-track">
+
+                        <div
+                            id="confidenceBar"
+                            class="confidence-meter-fill"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- NOTE -->
+        <div class="studio-note">
+
+            <span>💡</span>
+
+            <p>
+                Sign recognition uses the backend AI model.
+                Predictions depend on model availability and image quality.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="home-footer">
+
+        <h2>SignMark<span>.</span></h2>
+
+        <p>Bridging communication through technology.</p>
+
+        <div class="footer-links">
+
+            <a href="/">Home</a>
+            <a href="/home">Dashboard</a>
+            <a href="/studio">Recognition</a>
+            <a href="/dictionary">Dictionary</a>
+            <a href="/quiz">Quiz</a>
+            <a href="/about">About</a>
+
+        </div>
+
+        <p class="copyright">
+            © 2026 SignMark | AI-Based ASL Project
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="/static/js/studio.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SignMark | Dashboard</title>
+
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body class="home-page">
+
+    <!-- NAVBAR -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">Sign<span>Mark.</span></div>
+
+            <ul class="nav-links">
+                <li><a href="/" class="active">Home</a></li>
+                <li><a href="/studio">Recognition</a></li>
+                <li><a href="/dictionary">Dictionary</a></li>
+                <li><a href="/quiz">Quiz</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+
+            <button class="nav-btn" id="logoutBtn" type="button">Logout</button>
+        </nav>
+    </header>
+
+
+    <!-- MAIN DASHBOARD -->
+    <main class="dashboard">
+
+        <!-- WELCOME HERO -->
+        <section class="welcome-section">
+
+            <span class="tagline">
+                YOUR ASL LEARNING SPACE
+            </span>
+
+            <h1>
+                Welcome to <span>SignMark!</span> 🤟
+            </h1>
+
+            <p>
+                Every hand gesture tells a story.
+                Start learning American Sign Language,
+                practice new signs, and break communication barriers.
+            </p>
+
+            <div class="welcome-actions">
+                <a href="/dictionary" class="primary-btn">
+                    Start Learning →
+                </a>
+
+                <a href="/studio" class="secondary-btn">
+                    Try Sign Recognition
+                </a>
+            </div>
+
+        </section>
+
+
+        <!-- LEARNING HIGHLIGHTS -->
+        <section class="dashboard-highlights">
+
+            <div class="highlight-card">
+                <div class="highlight-icon">🔤</div>
+                <div>
+                    <h3>26 Letters</h3>
+                    <p>ASL Alphabet</p>
+                </div>
+            </div>
+
+            <div class="highlight-card">
+                <div class="highlight-icon">📷</div>
+                <div>
+                    <h3>Live Learning</h3>
+                    <p>Sign Recognition</p>
+                </div>
+            </div>
+
+            <div class="highlight-card">
+                <div class="highlight-icon">🎯</div>
+                <div>
+                    <h3>Practice Mode</h3>
+                    <p>Interactive Quiz</p>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- LEARNING JOURNEY -->
+        <section class="dashboard-section">
+
+            <div class="section-heading">
+                <span class="tagline">EXPLORE SIGNMARK</span>
+
+                <h2>Your Learning Journey</h2>
+
+                <p>
+                    Choose a learning activity and start improving
+                    your sign language skills.
+                </p>
+            </div>
+
+
+            <!-- FEATURE CARDS -->
+            <div class="dashboard-cards">
+
+                <!-- RECOGNITION -->
+                <div class="dashboard-card">
+
+                    <div class="dashboard-icon">📷</div>
+
+                    <span class="card-label">AI EXPERIENCE</span>
+
+                    <h2>Sign Recognition</h2>
+
+                    <p>
+                        Use your camera or upload an image
+                        to explore ASL sign recognition.
+                    </p>
+
+                    <a href="/studio">
+                        Start Recognition →
+                    </a>
+
+                </div>
+
+
+                <!-- DICTIONARY -->
+                <div class="dashboard-card">
+
+                    <div class="dashboard-icon">📚</div>
+
+                    <span class="card-label">LEARN ALPHABET</span>
+
+                    <h2>ASL Dictionary</h2>
+
+                    <p>
+                        Discover the ASL alphabet from A to Z
+                        and explore different hand signs.
+                    </p>
+
+                    <a href="/dictionary">
+                        Explore Dictionary →
+                    </a>
+
+                </div>
+
+
+                <!-- QUIZ -->
+                <div class="dashboard-card">
+
+                    <div class="dashboard-icon">🎯</div>
+
+                    <span class="card-label">TEST YOUR SKILLS</span>
+
+                    <h2>Practice Quiz</h2>
+
+                    <p>
+                        Challenge yourself with interactive questions
+                        and improve your ASL knowledge.
+                    </p>
+
+                    <a href="/quiz">
+                        Start Quiz →
+                    </a>
+
+                </div>
+
+
+                <!-- LEARNING -->
+                <div class="dashboard-card">
+
+                    <div class="dashboard-icon">💡</div>
+
+                    <span class="card-label">KEEP GROWING</span>
+
+                    <h2>Learn & Improve</h2>
+
+                    <p>
+                        Practice regularly, learn new signs,
+                        and build confidence step by step.
+                    </p>
+
+                    <a href="/dictionary">
+                        Continue Learning →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- MOTIVATIONAL BANNER -->
+        <section class="dashboard-banner">
+
+            <div class="banner-content">
+
+                <span class="tagline">COMMUNICATION HAS NO LIMITS</span>
+
+                <h2>Every Sign Has a Story.</h2>
+
+                <p>
+                    A small gesture can make a big difference.
+                    Let's make communication accessible for everyone.
+                </p>
+
+                <a href="/dictionary" class="banner-btn">
+                    Begin Your Journey →
+                </a>
+
+            </div>
+
+            <div class="banner-icon">
+                🤟
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="home-footer">
+
+        <h2>SignMark<span>.</span></h2>
+
+        <p>
+            Bridging communication through technology.
+        </p>
+
+        <div class="footer-links">
+            <a href="/">Home</a>
+            <a href="/studio">Recognition</a>
+            <a href="/dictionary">Dictionary</a>
+            <a href="/quiz">Quiz</a>
+            <a href="/about">About</a>
+        </div>
+
+        <p class="copyright">
+            © 2026 SignMark | AI-Based ASL Project
+        </p>
+
+    </footer>
+
+
+    <!-- LOGOUT -->
+    <script>
+        document.getElementById("logoutBtn").addEventListener("click", async function () {
+            try {
+                await fetch("/api/auth/logout", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    }
+                });
+            } catch (error) {
+                console.error("Logout error:", error);
+            }
+
+            window.location.href = "/auth";
+        });
+    </script>
+
+</body>
+</html>
